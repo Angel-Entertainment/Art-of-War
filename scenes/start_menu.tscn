@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4j5021o6226g"]
+
+[ext_resource type="Theme" uid="uid://bqdlrva7m61as" path="res://assets/start_menu_theme.tres" id="1_mqxaq"]
+[ext_resource type="Script" uid="uid://c07c8wr0dums" path="res://scenes/start_menu.gd" id="2_ueh08"]
+[ext_resource type="AudioStream" uid="uid://1ygg55rx116e" path="res://assets/snap.ogg" id="3_h61rw"]
+[ext_resource type="Script" uid="uid://dj0mt5osr1fa5" path="res://scenes/snap_audio_stream_player.gd" id="4_fcv5n"]
+[ext_resource type="Script" uid="uid://q3d4co58j5bm" path="res://scenes/start_button.gd" id="5_fcv5n"]
+
+[node name="StartMenu" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mqxaq")
+script = ExtResource("2_ueh08")
+metadata/_edit_lock_ = true
+
+[node name="SnapAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h61rw")
+script = ExtResource("4_fcv5n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="GameNameLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Art of War"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StartButton" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../OptionsButton")
+focus_next = NodePath("../OptionsButton")
+text = "Start"
+script = ExtResource("5_fcv5n")
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../StartButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+focus_previous = NodePath("../StartButton")
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../OptionsButton")
+focus_previous = NodePath("../OptionsButton")
+text = "Quit"
+
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/StartButton" to="SnapAudioStreamPlayer" method="_on_start_button_button_down"]
+[connection signal="focus_entered" from="VBoxContainer/VBoxContainer/StartButton" to="VBoxContainer/VBoxContainer/StartButton" method="_on_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/OptionsButton" to="SnapAudioStreamPlayer" method="_on_options_button_button_down"]
+[connection signal="focus_entered" from="VBoxContainer/VBoxContainer/OptionsButton" to="SnapAudioStreamPlayer" method="_on_options_button_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/QuitButton" to="SnapAudioStreamPlayer" method="_on_quit_button_button_down"]
+[connection signal="focus_entered" from="VBoxContainer/VBoxContainer/QuitButton" to="SnapAudioStreamPlayer" method="_on_quit_button_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

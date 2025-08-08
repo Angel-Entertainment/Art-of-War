@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://by1oailoxmann"]
+
+[ext_resource type="Script" uid="uid://bg27fh41eg6ou" path="res://scenes/options_menu.gd" id="1_ftg6t"]
+[ext_resource type="Theme" uid="uid://bqdlrva7m61as" path="res://assets/start_menu_theme.tres" id="1_xwabc"]
+
+[node name="OptionsMenu" type="TabContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xwabc")
+tab_alignment = 1
+current_tab = 0
+script = ExtResource("1_ftg6t")
+metadata/_edit_lock_ = true
+
+[node name="UwU" type="VBoxContainer" parent="."]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="BackButton" type="Button" parent="UwU"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[connection signal="pressed" from="UwU/BackButton" to="." method="_on_back_button_pressed"]

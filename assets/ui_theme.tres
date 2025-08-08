@@ -1,0 +1,80 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://o051ccrleq6l"]
+
+[ext_resource type="FontFile" uid="uid://btdw5m5mjg0jn" path="res://assets/EBGaramond-0.016/ttf/EBGaramond12-Regular.ttf" id="1_wf4hb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_op3g3"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onaa3"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.661267, 0.7, 0.119, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.472333, 0.5, 0.085, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqwae"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.472333, 0.5, 0.085, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.661267, 0.7, 0.119, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_th4u2"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.7832, 0.8, 0.296, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.661267, 0.7, 0.119, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2a8bg"]
+color = Color(0.71, 0.71, 0.2272, 1)
+
+[resource]
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_wf4hb")
+Button/styles/focus = SubResource("StyleBoxFlat_op3g3")
+Button/styles/hover = SubResource("StyleBoxFlat_onaa3")
+Button/styles/normal = SubResource("StyleBoxFlat_wqwae")
+Button/styles/pressed = SubResource("StyleBoxFlat_th4u2")
+HSeparator/styles/separator = SubResource("StyleBoxLine_2a8bg")
+Label/font_sizes/font_size = 64
+Label/fonts/font = ExtResource("1_wf4hb")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c772p73dddl8x"]
+
+[ext_resource type="Script" uid="uid://0krm6548h44v" path="res://scenes/game.gd" id="1_wynai"]
+[ext_resource type="PackedScene" uid="uid://ccxylv0l6n8og" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://bwe8f7btn7be2" path="res://icon.svg" id="3_lnu2h"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_wynai")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(239, 171)
+texture = ExtResource("3_lnu2h")
+
+[node name="Player" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(235, 184)
