@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 
 func _ready() -> void:
-	
+	pass
 
 func _on_start_button_button_down() -> void:
 	play()
