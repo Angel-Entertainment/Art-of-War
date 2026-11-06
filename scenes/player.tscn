@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccxylv0l6n8og"]
+[gd_scene format=3 uid="uid://ccxylv0l6n8og"]
 
 [ext_resource type="Script" uid="uid://y0fn332yapg7" path="res://scenes/player.gd" id="1_3vyb7"]
-[ext_resource type="Theme" uid="uid://o051ccrleq6l" path="res://assets/ui_theme.tres" id="2_g2els"]
+[ext_resource type="Theme" uid="uid://o051ccrleq6l" path="res://assets/theme.tres" id="2_g2els"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_3vyb7")

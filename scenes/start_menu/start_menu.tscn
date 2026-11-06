@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cp180ay3qxfle"]
+
+[ext_resource type="Theme" uid="uid://o051ccrleq6l" path="res://assets/theme.tres" id="1_ces3l"]
+
+[node name="StartMenu" type="Control" unique_id=1825084420]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ces3l")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1675812126]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=58506523]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1582606499]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1487376534]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "
+Art of War"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer" unique_id=984368797]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1943589343]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=1276466518]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=1149192677]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Options"
+
+[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer" unique_id=12301046]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit"
